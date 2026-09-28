@@ -25,7 +25,10 @@ namespace jangseoyeon2649035
             }
         }
     public:
-
+        book(int d=1, int p=0):id{d},price{p}
+        {
+            testID(); testPrice();
+        }
         void input()
         {
           std::cout << "Enter book id as a number: ";
@@ -35,12 +38,12 @@ namespace jangseoyeon2649035
         }
         void setID(int d){id=d; testID();}
         void setPrice(int p){price=p; testPrice();}
-        void print()
+        void print() const
         {
             std::cout << id <<"/" << price << std::endl;
         }
-        int getID() {return id;}
-        int getPrice() {return price;}
+        int getID() const {return id;}
+        int getPrice() const {return price;}
     };
 }
 // 1. 본인이름학번의 네임스페이스
